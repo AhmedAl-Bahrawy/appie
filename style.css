@@ -134,11 +134,13 @@ nav ul li a {
 
 .hero-section {
   height: 100vh;
-  padding: 200px 0px 0px 60px;
+  padding: 150px 0px 0px 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(to bottom, #eef1f6, #0e1133);
+  overflow: hidden;
 }
 
 .left-side > :nth-child(1),
