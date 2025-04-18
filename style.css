@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,13 +11,14 @@ body {
   color: #333;
 }
 
+/* NAVIGATION */
 nav {
   background: #eef1f6;
-  color: #ffffff;
   padding: 40px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background 0.3s ease-in-out;
 }
 
 nav ul {
@@ -33,19 +35,25 @@ nav ul li a {
   color: black;
   text-decoration: none;
   font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff3e66;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
   margin-right: 60px;
+  width: auto;
+  height: auto;
 }
 
 .left-side-r,
 .right-side-r {
   display: flex;
   align-items: center;
-  flex-direction: row;
 }
 
 .cta-btn {
@@ -54,87 +62,17 @@ nav ul li a {
   border: none;
   border-radius: 50px;
   color: #ffffff;
-  transition: all 0.3s;
   font-size: 16px;
+  transition: all 0.3s;
 }
 
 .cta-btn:hover {
   background: #ef4168;
-  color: #ffffff;
 }
 
-.field {
-  position: relative;
-}
-
-.field .input-field {
-  padding: 20px 120px 20px 40px;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s;
-}
-
-.field .input-field::placeholder {
-  font-size: 16px;
-  color: black;
-  opacity: 0.6;
-}
-
-.field .input-field:focus {
-  outline: 2px #ff3e66 solid;
-}
-
-.field .mail-icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: black;
-  opacity: 0.4;
-  width: 15px;
-}
-
-.field .send-btn {
-  position: absolute;
-  left: 275px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: black;
-  background: none;
-  border: none;
-  border-radius: 50%;
-  transition: all 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.field .send-btn:hover {
-  background: #ff3e66;
-  color: #ffffff;
-}
-
-.field .arrow-icon {
-  width: 30px;
-}
-
-.field .shape {
-  position: absolute;
-  top: 0;
-  left: -8px;
-  width: 100px;
-  height: 100%;
-  background: #ff3e66;
-  border-radius: 50px;
-  z-index: -1;
-  transition: all 0.3s;
-}
-
+/* HERO SECTION */
 .hero-section {
-  height: 100vh;
-  padding: 150px 0px 0px 60px;
+  padding: 150px 60px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -143,22 +81,204 @@ nav ul li a {
   overflow: hidden;
 }
 
-.left-side > :nth-child(1),
-.left-side > :nth-child(2) {
+.hero-section .left-side > :nth-child(1),
+.hero-section .left-side > :nth-child(2) {
   font-size: 50px;
   color: #0e1133;
   font-weight: 700;
   line-height: 1.2;
 }
-.left-side > :nth-child(3) {
+
+.hero-section .left-side > :nth-child(3) {
   font-size: 55px;
   color: #0e1133;
   font-weight: 900;
 }
 
-.left-side > :nth-child(4) {
+.hero-section .left-side > :nth-child(4) {
   font-size: 18px;
   color: #0e1133;
-  margin: 20px 0px;
+  margin: 20px 0;
   font-weight: 300;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+/* FIELD STYLES */
+.field {
+  position: relative;
+  margin-top: 20px;
+}
+
+.input-field {
+  padding: 20px 120px 20px 40px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.input-field::placeholder {
+  font-size: 16px;
+  color: black;
+  opacity: 0.6;
+}
+
+.input-field:focus {
+  outline: 2px #ff3e66 solid;
+}
+
+.mail-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  opacity: 0.4;
+}
+
+.send-btn {
+  position: absolute;
+  left: 340px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.send-btn:hover {
+  background: #ff3e66;
+}
+
+.arrow-icon {
+  width: 30px;
+}
+
+/* INFO SECTION */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  padding: 75px 60px;
+  text-align: center;
+  background: #fff;
+}
+
+.titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.info-section .left-side h1 {
+  font-size: 50px;
+  color: #0e1133;
+  font-weight: 800;
+}
+
+.info-section .left-side h3 {
+  font-size: 16px;
+  color: black;
+  opacity: 0.6;
+  margin: 15px 0;
+}
+
+.view-btn {
+  padding: 15px 25px;
+  background: none;
+  border: 2px solid rgba(148, 148, 148, 0.4);
+  border-radius: 50px;
+  color: #0e1133;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.7s;
+}
+
+.view-btn:hover {
+  background-color: #ff3e66;
+  color: white;
+  border: none;
+}
+
+/* ANIMATIONS */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1.2s ease-in-out;
+}
+
+.fade-up {
+  animation: fade-up 1.2s ease-in-out;
+}
+
+.slide-in-left {
+  animation: slide-in-left 1.2s ease-in-out;
+}
+
+.features-cards-container {
+  padding: 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 75px;
+  max-width: 100%;
+}
+
+.features-cards-container .card {
+  width: 400px;
+  height: 300px;
+  background-color: none;
+  border: 2px solid rgba(148, 148, 148, 0.3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  justify-content: space-between;
+}
+
+.features-cards-container .card .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
 }
