@@ -5,14 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>appie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Appie</title>
 </head>
 
 <body>
     <nav>
         <div class="left-side-r">
-            <img src="Project Images/logo.png" alt="" class="logo" />
-            <ul>
+            <img src="Project Images/logo.png" alt="Appie Logo" class="logo" />
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Pages</a></li>
@@ -22,6 +23,9 @@
         </div>
         <div class="right-side-r">
             <button class="cta-btn">Get Started</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
         </div>
     </nav>
 
@@ -39,7 +43,16 @@
                         <img src="Project Images/icons/counter-icon-6.png" alt="Send Icon" class="arrow-icon" />
                     </button>
                 </div>
-
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-download"></i>
+                        <span>30K+ Downloads</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <span>4.8 Rating</span>
+                    </div>
+                </div>
             </div>
             <div class="right-side fade-in">
                 <img class="hero-img" src="Project Images/hero.png" alt="Hero Image" />
@@ -58,14 +71,122 @@
             </div>
             <div class="features-cards-container">
                 <div class="card">
-                    <img class="icon" src="Project Images/icons/counter-icon-7.png" alt="">
+                    <div class="card-icon-wrapper red">
+                        <img class="icon" src="Project Images/icons/counter-icon-7.png" alt="Fast Performance">
+                    </div>
+                    <h3>Fast Performance</h3>
+                    <p>Get your applications ready in no time with our fast and reliable services.</p>
+                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="card">بطاقة 2</div>
-                <div class="card">بطاقة 3</div>
-                <div class="card">بطاقة 4</div>
+                <div class="card">
+                    <div class="card-icon-wrapper blue">
+                        <img class="icon" src="Project Images/icons/counter-icon-7.png" alt="Prototyping">
+                    </div>
+                    <h3>Prototyping</h3>
+                    <p>Create stunning prototypes with our intuitive tools and templates.</p>
+                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <div class="card-icon-wrapper green">
+                        <img class="icon" src="Project Images/icons/counter-icon-7.png" alt="Vector Editing">
+                    </div>
+                    <h3>Vector Editing</h3>
+                    <p>Edit vector graphics with precision and create beautiful designs.</p>
+                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <div class="card-icon-wrapper yellow">
+                        <img class="icon" src="Project Images/icons/counter-icon-7.png" alt="Cloud Storage">
+                    </div>
+                    <h3>Cloud Storage</h3>
+                    <p>Store all your files securely in the cloud and access them anywhere.</p>
+                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="marketing-section">
+            <div class="container">
+                <div class="marketing-content fade-in">
+                    <h2>Marketing</h2>
+                    <h1>Make a lasting impression with appie.</h1>
+                    <p>Jolly good quaint james bond victoria sponge happy days cras arse over blatant.</p>
+
+                    <div class="marketing-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Carefully designed</h3>
+                                <p>Mucker plastered bugger all mate morish are.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Choose an App</h3>
+                                <p>Mucker plastered bugger all mate morish are.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marketing-image slide-in-left">
+                    <img src="Project Images/hero.png" alt="Marketing Image">
+                </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="Project Images/logo.png" alt="Appie Logo" class="footer-logo">
+                    <p>Appie WordPress is theme is the last theme you will ever have.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>support@appie.com</p>
+                    <p>+91 123 456 7890</p>
+                    <button class="contact-btn">Contact Us</button>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Appie. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
