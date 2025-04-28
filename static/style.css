@@ -702,6 +702,15 @@ footer {
   font-size: 14px;
 }
 
+.copyright span {
+  font-weight: 600;
+}
+
+.copyright span a {
+  color: #ff3e66;
+  text-decoration: none;
+}
+
 /* ANIMATIONS */
 @keyframes slide-in-left {
   from {
